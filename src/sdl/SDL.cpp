@@ -3024,7 +3024,10 @@ bool systemSoundInit()
     fprintf(stderr,"Failed to open audio: %s\n", SDL_GetError());
     return false;
   }
-  soundBufferTotalLen = soundBufferLen*10;
+
+  // aleh: soundBufferTotalLen does not seem to be actually used anywhere, commenting out.
+  //~ soundBufferTotalLen = soundBufferLen*10;
+
   // Patch #1382692 by deathpudding.
   sdlBufferLock  = SDL_CreateSemaphore (1);
   sdlBufferFull  = SDL_CreateSemaphore (0);
