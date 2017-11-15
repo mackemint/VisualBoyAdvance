@@ -87,11 +87,14 @@ bool utilWritePNGFile(const char *fileName, int w, int h, u8 *pix)
     return false;
   }
 
+  #warning TODO: Disabled temporarily, only to not mess with the libpng settings
+  /*~
   if(setjmp(png_ptr->jmpbuf)) {
     png_destroy_write_struct(&png_ptr,NULL);
     fclose(fp);
     return false;
   }
+  */
 
   png_init_io(png_ptr,fp);
 
