@@ -256,10 +256,10 @@ SDL_mutex *sdlBufferLock = NULL;
 SDL_cond *sdlBufferAvailable = NULL;
 
 // Number of samples the SDL audio callback expects.
-const int actualSDLBufferSamples = 256;
+const int actualSDLBufferSamples = 1024;
 
 // Number of samples in our pre-SDL buffer below (sdlBuffer).
-const int sdlBufferSamples = 10 * 1024;
+const int sdlBufferSamples = 2 * 1024;
 const int sdlBufferSize = sdlBufferSamples * 2 * 2; // 16-bit stereo
 u8 sdlBuffer[sdlBufferSize];
 int sdlSoundLen = 0;
